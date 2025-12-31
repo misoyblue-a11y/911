@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>서울 재난본부</title>
+
+<!-- CSS 리셋 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+<!-- 폰트어썸 -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- 구글 폰트 아이콘 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<!-- 제이쿼리 -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+
+<!-- 로컬 CSS -->
+<link rel="stylesheet" href="./css/style.css">
+
+<!-- 로컬 JS -->
+<script src="./js/script.js" defer></script>
+</head>
+<body>
+
+<!-- 시각장애인용 skip 링크 -->
+<!-- <ul id="skip">
+    <li><a href="#header">헤더 바로가기</a></li>
+    <li><a href="#nav">메뉴 바로가기</a></li>
+    <li><a href="#content">내용 바로가기</a></li>
+    <li><a href="#footer">하단 바로가기</a></li>
+</ul> -->
+
+<header id="header">
+    <div class="header_inner">
+        <div class="header_left">
+            <h1><a href="#" class="click-item"><img src="./img/seoul_logo_white.svg" alt="서울로고"></a></h1>
+    
+            <div class="news">
+                <span class="material-symbols-outlined">notifications_active</span>
+                <a href="https://www.google.com" target="_blank" class="click-item">
+                    건강한 겨울의 시작, 인플루엔자 예방으로부터!
+                </a>
+            </div>
+        
+
+        <ul>
+            <li><a href="https://www.netflix.com/browse" target="_blank" class="click-item">서울소식</a></li>
+            <li><a href="https://www.daum.net/" target="_blank" class="click-item">응답소</a></li>
+            <li><a href="https://www.kbstar.com/" target="_blank" class="click-item">정보공개</a></li>
+            <li><a href="https://www.shinhan.com/index.jsp" target="_blank" class="click-item">분야별종류</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="header_b">
+        <div class="hader_bottom">
+            <h1 class="click-item"><a href="#"><img src="./img/main-logo-blue.svg" alt="서울재난본부로고"></a></h1>
+    
+            <div class="bottom_right">
+                <div class="dropdown">
+                    <button class="dropdown_button click-item">
+                        유관기관 
+                    </button>
+                    <ul class="dropdown_menu" hidden>
+                        <li><a href="#" class="click-li" >119안전신고센터</a></li>
+                        <li><a href="#" class="click-li" >119특수구조단</a></li>
+                        <li><a href="#" class="click-li">광나루 안전체험관</a></li>
+                        <li><a href="#" class="click-li">보라매 안전체험관</a></li>
+                        <li><a href="#" class="click-li">사이버추모관</a></li>
+                        <li><a href="#" class="click-li">서울소방재난본부</a></li>
+                        <li><a href="#" class="click-li">서울소방학교</a></li>
+                        <li><a href="#" class="click-li">서울종합방재센터</a></li>
+                        <li><a href="#" class="click-li">소방청</a></li>
+                        <li><a href="#" class="click-li">의소대연합회</a></li>
+                        <li><a href="#" class="click-li">재항소방동우회</a></li>
+                        <li><a href="#" class="click-li">중앙소방학교</a></li>
+                    </ul>
+                </div>
+                <div class="selec_langua">
+                    <button class="dropdown_langua">
+                        KOR
+                    </button>
+                    <div class="line"></div>
+                    <ul class="dropdown_lang">
+                        <li><a href="#">KOR</a></li>
+                        <li><a href="#">ENG</a></li>
+                    </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+$(document).ready(function() {
+    $('.click-item').on('click', function() {
+        $('.click-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.dropdown_button').on('click', function() {
+        const menu = $(this).siblings('.dropdown_menu');
+        menu.toggleAttr('hidden');
+    });
+});
+
+
+$(document).ready(function(){
+        $('.click-li').on('click',function(){
+          $('.click-li').removeClass('active');
+          $(this).addClass('active');
+    })
+});
+
+
+$(document).ready(function(){
+    $('.dropdown_langua').on('click', function() {
+        const menu = $(this).siblings('.dropdown_lang');
+        menu.toggleAttr('hidden');
+    });
+})
+
+</script>
+
+</body>
+</html>

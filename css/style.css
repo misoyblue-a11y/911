@@ -1,0 +1,232 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{color: #fff; text-decoration: none;}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+header {
+  width: 100%;
+  z-index: 1000;
+}
+.header_inner{
+    width:100%;
+    background: #0c82e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 7px 400px;
+    
+}
+.header_inner .header_left{
+    display: flex;
+    justify-content:flex-start;
+    position: relative;
+    width: 100%;
+}
+.header_left img {
+  width: 78px;
+  height: 100%;
+ 
+}
+.header_left .news{
+    display: flex;
+   
+}
+.header_left .news>span{
+    color: #fff;
+    margin-left: 30px;
+    cursor: default;
+}
+.header_left .news>a{
+    font-size: 14px;
+    padding: 1px 3px;
+    font-weight: 800;
+    padding: 3px 0;
+    margin-left: 8px;
+}
+.header_left .news>a.active{   
+    border: 1px dashed red;
+}
+.header_left ul{
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    position:absolute;
+    right: 0;      
+    top: 50%;      
+    transform: translateY(-50%);
+    
+}
+.header_left ul>li{
+    font-size: 12px;
+    margin: 0;
+    font-weight: 600;
+}
+.header_left>ul>li.active{
+    border: 1px dashed red;
+}
+.bottom_right{
+    right: 0;      
+    top: 50%;      
+    transform: translateY(-50%);
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    display: flex;
+}
+.header_b{
+    width: 100%;
+    padding: 12px 400px;
+    border: 1px solid #ccc;
+}
+.header_b .hader_bottom{
+    justify-content:flex-start;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.dropdown_button{
+    background: none;
+    border-color: transparent;  
+    cursor: pointer;
+    padding: 2px 7px;
+    width: 82px;
+    
+}
+.dropdown_button>h1.active{
+    border: 1px dashed red;
+}
+.dropdown_button.active{
+    border: 1px dashed red;
+}
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 10px 0 20px 0;
+    text-align: center;
+    border-radius: 2px;
+    right: 4px;
+}
+.dropdown_menu li a {
+    background-color: #fff;
+    display: block;
+    padding: 12px 10px;
+    color: #8e8e8e;
+    text-decoration: none;
+    width: 135px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.dropdown_menu li a.active{
+    border-top: 1px dashed red;
+}
+.click-item {
+  border: 1px dashed transparent;
+  border-radius: 4px;
+}
+
+.dropdown_button {
+  display: inline-block;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  padding: 4px 20px 4px 6px;
+  position: relative;
+}
+.dropdown_button:after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: url(../img/arrow-down.svg) center center;
+    position: absolute;
+    top: 9px;
+    right: 2px;
+    transform: rotate(0deg);
+    transition:.3s;
+}
+.dropdown_button.add:after{
+     transform: rotate(180deg);
+}
+
+.click-item.active {
+  border-color: red;
+}
+.selec_langua{
+    position: relative;
+    display: inline-block;
+    display: flex;
+}
+/* .dropdown_langua:before{
+    content: "";
+    display: inline-block;
+    width: 1px;           
+    height: 1em;          
+    background-color: #ccc;
+    margin-right: 8px;   
+    cursor:default;
+    
+} */
+.selec_langua .line{
+    content: "";
+    display: inline-block;
+    width: 1px;           
+    height: 1em;          
+    background-color: #ccc;
+    /* margin-right: 8px; */   
+    cursor:default;
+}
+.dropdown_langua{
+    background: none;
+    border-color: transparent;  
+    cursor: pointer;
+    padding: 2px 7px;
+    font-size: 14px;
+    display: inline-flex;      
+    align-items: center;       
+    gap: 6px;   
+    box-sizing: content-box;
+}
+.dropdown_langua:after{
+    content: "";
+    display: inline-block;   
+    width: 16px;
+    height: 16px;         
+    background: url(/img/globe.svg) no-repeat;
+    width: 1em;                 
+    height: 1em;          
+    cursor:default;
+    
+}
+
+.dropdown_lang{
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 10px 0 20px 0;
+    text-align: center;
+    border-radius: 2px;
+    left: 17px;
+}
+.dropdown_lang>li{}
+.dropdown_lang>li>a{
+    background-color: #fff;
+    display: block;
+    padding: 12px 5px;
+    color: #8e8e8e;
+    text-decoration: none;
+    width: 50px;
+    font-weight: 700;
+    font-size: 13px;
+}
